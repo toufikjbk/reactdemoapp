@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { useState } from "react";
 
 export default function TextForm(props) {
@@ -99,7 +99,7 @@ export default function TextForm(props) {
             Word count is{" "}
             {
               text.split(/[ ]+/).filter((a1) => {
-                return a1.length != 0;
+                return a1.length !== 0;
               }).length
             }{" "}
             and character count is {text.length}

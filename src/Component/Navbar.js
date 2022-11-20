@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 export default function Navbar(propes) {
   let switchColor = {
@@ -9,7 +8,7 @@ export default function Navbar(propes) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="#">
           TextUtils
         </a>
         <button
@@ -26,7 +25,7 @@ export default function Navbar(propes) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/home">
+              <a className="nav-link active" aria-current="page" href="#">
                 {propes.home}
               </a>
             </li>

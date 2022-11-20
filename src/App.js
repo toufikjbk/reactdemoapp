@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import Accordian from "./Component/Accordian";
+
 import Navbar from "./Component/Navbar";
 import TextForm from "./Component/TextForm";
 import Alert from "./Component/Alert";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [colors, setcolor] = useState({
@@ -76,21 +75,7 @@ function App() {
       />
       <Alert alert={alerttext} />
 
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <TextForm
-                style={colors}
-                boxstyle={boxcolors}
-                alertmsg={alertmsg}
-              />
-            }
-          />
-          <Route path="/home" element={<Accordian />} />
-        </Routes>
-      </BrowserRouter>
+      <TextForm style={colors} boxstyle={boxcolors} alertmsg={alertmsg} />
     </>
   );
 }
